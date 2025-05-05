@@ -18,58 +18,38 @@ import {
 } from "../../redux/adminReducer/action";
 const initialState = {
   name: "",
-  img: " ",
+  img: "",
   mrp: "",
   price: "",
   brand: "",
   category: "",
+  quantity: "", // added
 };
+
 const reducerFn = (state, action) => {
   const { type, payload } = action;
   switch (type) {
-    case "NAME": {
-      return {
-        ...state,
-        name: payload,
-      };
-    }
-    case "IMG": {
-      return {
-        ...state,
-        img: payload,
-      };
-    }
-    case "MRP": {
-      return {
-        ...state,
-        mrp: +payload,
-      };
-    }
-    case "PRICE": {
-      return {
-        ...state,
-        price: +payload,
-      };
-    }
-    case "BRAND": {
-      return {
-        ...state,
-        brand: payload,
-      };
-    }
-    case "CATEGORY": {
-      return {
-        ...state,
-        category: payload,
-      };
-    }
-    case "reset": {
+    case "NAME":
+      return { ...state, name: payload };
+    case "IMG":
+      return { ...state, img: payload };
+    case "MRP":
+      return { ...state, mrp: +payload };
+    case "PRICE":
+      return { ...state, price: +payload };
+    case "BRAND":
+      return { ...state, brand: payload };
+    case "CATEGORY":
+      return { ...state, category: payload };
+    case "QUANTITY":
+      return { ...state, quantity: +payload };
+    case "reset":
       return initialState;
-    }
     default:
       return state;
   }
 };
+
 export const AddProduct = () => {
   const initialRef = useRef(null);
   const toast = useToast();
@@ -212,6 +192,17 @@ export const AddProduct = () => {
               <option value="Pilcro">Pilcro</option>
             </Select>
           </FormControl>
+          <FormControl mt={4} isRequired>
+  <FormLabel>Product Quantity</FormLabel>
+  <Input
+    border={"1px dotted gray"}
+    name="quantity"
+    type="number"
+    onChange={(e) => dispatch({ type: "QUANTITY", payload: e.target.value })}
+    value={state.quantity}
+  />
+</FormControl>
+
           <FormControl mt={4} isRequired>
             <FormLabel>Product Category</FormLabel>
             <Select

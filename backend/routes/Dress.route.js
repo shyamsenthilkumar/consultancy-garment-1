@@ -67,21 +67,43 @@ dressRouter.get("/:id", async (req, res) => {
 });
 
 /* ------ Create one Dress ------ */
-dressRouter.post("/add", auth, async (req, res) => {
-  let { name, img, price, mrp, brand, rating, role } = req.body;
-  // res.send(data);
-  if (role === "admin") {
-    try {
-      let dress = new DressModel({ name, img, price, mrp, brand, rating });
-      await dress.save();
-      res.status(200).send({ msg: "Dress added Successfully" });
-    } catch (error) {
-      res.status(400).send({ err: error });
-    }
-  } else {
-    res.status(401).send({ msg: "You are not Authorized" });
+// Add Dress - for any authenticated user
+dressRouter.post("/add", async (req, res) => {
+  const { name, img, price, mrp, brand, rating } = req.body;
+
+  try {
+    const dress = new DressModel({ name, img, price, mrp, brand, rating, quantity: 100 });
+    await dress.save();
+    res.status(200).send({ msg: "Dress added Successfully", dress });
+  } catch (error) {
+    res.status(400).send({ err: error.message });
   }
 });
+
+
+
+// Decrease quantity based on order
+dressRouter.patch("/order/:id", auth, async (req, res) => {
+  const { id } = req.params;
+  const { quantity } = req.body;
+
+  try {
+    const product = await DressModel.findById(id);
+    if (!product) return res.status(404).send({ msg: "Product not found" });
+
+    if (product.quantity < quantity) {
+      return res.status(400).send({ msg: "Insufficient stock" });
+    }
+
+    product.quantity -= quantity;
+    await product.save();
+
+    res.status(200).send({ msg: "Order placed, quantity updated" });
+  } catch (error) {
+    res.status(500).send({ msg: "Error processing order", error });
+  }
+});
+
 
 /* ------ Update Dress ------ */
 dressRouter.patch("/update/:id", auth, async (req, res) => {

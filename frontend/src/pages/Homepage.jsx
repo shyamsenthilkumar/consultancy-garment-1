@@ -53,11 +53,11 @@ export const Homepage = () => {
       <Flex direction={{ base: "column", md: "row" }} gap={4} mt={10}>
         <Img
           width={{ base: "100%", md: "66.33%", lg: "66.33%" }}
-          src="https://images.ctfassets.net/5de70he6op10/4wVzbSpI6ID8KcGVGU4YEg/0983e72b6e8fa8aec4bd1b76b018c683/495283964-ls_m1a.jpg?w=1760&q=80&fm=webp"
+          src="https://ramrajcotton.in/cdn/shop/files/1_970a2f21-1654-479a-8ba1-49191a48aab9.jpg?v=1724760815"
         />
         <Img
           width={{ base: "100%", md: "33%", lg: "33%" }}
-          src="https://images.ctfassets.net/5de70he6op10/535xsTiyC4DHGuvowscdeA/b0f5c8f7d2b6ec317ad2739a489f8601/495283970-ls_m1b.jpg?w=856&q=80&fm=webp"
+          src="https://global.karagiri.com/cdn/shop/products/designer-banarasi-saree-kumkum-red-and-orange-woven-designer-banarasi-saree-with-embroidered-silk-blouse-silk-saree-online-14856033370215.jpg?v=1668413015"
         />
       </Flex>
       <Grid
@@ -69,15 +69,15 @@ export const Homepage = () => {
         gap={4}
         mt={5}
       >
-        <Img src="https://images.ctfassets.net/5de70he6op10/4YhzXIXeypS6qhwJwE1UmJ/aa8c79f62ee1de6392c60aee753a3fc9/495283974-ls_m2a.jpg?w=856&q=80&fm=webp" />
-        <Img src="https://images.ctfassets.net/5de70he6op10/7iqzbl2SU2BRRAKUn7bP3U/dacb672e6989fd6ef8c80ec49b4d9e8b/495283977-ls_m2b.jpg?w=856&q=80&fm=webp" />
-        <Img src="https://images.ctfassets.net/5de70he6op10/5zq7dWhFEtMLPLDB57Ux9d/69811448499d79bc2d1a5b84f684a8f5/495283980-ls_m2c.jpg?w=856&q=80&fm=webp" />
+        <Img src="https://kavani.in/cdn/shop/files/201.png?v=1682391141" />
+        <Img src="https://lajreedesigner.com/cdn/shop/files/Aayna-40100-Black_2_900x1350_crop_center@2x.jpg?v=1712809934" />
+        <Img src="https://ramrajcotton.in/cdn/shop/files/Default_3fb453b5-31cf-451d-9740-c3e79606bc92.jpg?v=1720256916" />
       </Grid>
       <Grid gap={4} mt={5}>
         <Img src="https://images.ctfassets.net/5de70he6op10/5YVazy6p6NRSq5r0UJZyik/40ab870dc9b33c82e81a0dee81fee6e1/495283984-ls_m3.jpg?w=2641&q=80&fm=webp" />
       </Grid>
       <Grid gap={4} mt={5}>
-        <Img src="https://images.ctfassets.net/5de70he6op10/7cPyxsIrQV6WIHCZ4qGrnR/093e4bc8c4ce99b42bc3f5674fca49ec/495283988-ls_m4.jpg?w=2641&q=80&fm=webp" />
+        <Img src="https://lh4.googleusercontent.com/proxy/0c3Nu4RqEDxzM8vHbI62BwZH2XNGNhuT04rIdbjEIbXYm_tVxQP22Vo1wK82CR2uy5IwfpH9UgUXWW-2uy77GDw8SuisEd2t_f2EoMgYAlTwB96f6RxsamingBCxLMwkLUIU7fIJzTJ96oDThh0N2nEp_a0tqbjuuuMITqLMiKGHUv9Wz-Tw_VHTtBFL49jpDnSssrI6gzAWv4ZUOwA7MV9HyTqzEmK_LOBKHrdGhvgnwwOej3mV9bIAAWHcESuqrLJz33-8Sje3ROu-f0iD3Tf0rq0OF2Vm3vzRNdsaPd-_O_q7A0JelCKI79jWRPQHftNX6FDTho9Jzu-JHRjvHxZlsrF9dCNj3m_S" />
       </Grid>
       <Box mt={5} textAlign={"left"}>
         <Text fontSize={"xl"}>Top-Rated Picks</Text>
@@ -99,7 +99,7 @@ export const Homepage = () => {
           <Img
             height={450}
             w={"100%"}
-            src="https://images.ctfassets.net/5de70he6op10/3aS4xJSPsRLSRYqOWOCy9M/1e43125c0d59f05646fb3b13ec391bf7/495283921-ls_customerfave_a.jpg?w=630&q=80&fm=webp"
+            src="https://cdn.prod.website-files.com/637f32081b68888e6d1bdd50/64d50fa5286d458d5a0935e8_131.jpg"
           />
           <Text mt={3} fontSize={"xl"} textAlign={"left"} fontWeight={400}>
             The Bettin ShirtDress
@@ -160,7 +160,7 @@ export const Homepage = () => {
           <Img
             height={450}
             w={"100%"}
-            src="https://images.ctfassets.net/5de70he6op10/5RJhCFhVmyapEkc1cimjSg/a049b4fb804471adad142669c2f3d149/495284019-ss_customerfave_c.jpg?w=1125&q=80&fm=webp"
+            src="https://infinitylearn.com/surge/wp-content/uploads/2023/12/Traditional-Dress-of-Tamil-Nadu-Women.jpg"
           />
           <Text mt={3} fontSize={"xl"} textAlign={"left"} fontWeight={400}>
             The Naomi Flare Pants
@@ -220,7 +220,7 @@ export const Homepage = () => {
           <Img
             height={450}
             w={"100%"}
-            src="https://images.urbndata.com/is/image/Anthropologie/4130318350035_010_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=960"
+            src="https://st.adda247.com/https://www.adda247.com/ta/wp-content/uploads/2022/06/saree.jpeg"
           />
           <Text mt={3} fontSize={"xl"} textAlign={"left"} fontWeight={400}>
             The Somerset Maxi Dress
@@ -249,7 +249,7 @@ export const Homepage = () => {
           <Img
             height={450}
             w={"100%"}
-            src="https://images.urbndata.com/is/image/Anthropologie/4130646420031_104_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=960"
+            src="https://st.adda247.com/https://www.adda247.com/ta/wp-content/uploads/2022/06/saree.jpeg"
           />
           <Text mt={3} fontSize={"xl"} textAlign={"left"} fontWeight={400}>
             The Somerset Mini Dress
@@ -279,7 +279,7 @@ export const Homepage = () => {
           <Img
             height={450}
             w={"100%"}
-            src="https://images.urbndata.com/is/image/Anthropologie/4130578570023_041_b?$an-category$&qlt=80&fit=constrain"
+            src="https://www.shutterstock.com/shutterstock/photos/1099329095/display_1500/stock-photo-attractive-happy-north-indian-couple-in-traditional-dress-1099329095.jpg"
           />
           <Text mt={3} fontSize={"xl"} textAlign={"left"} fontWeight={400}>
             The Somerset Mini Dress
@@ -363,20 +363,9 @@ export const Homepage = () => {
           fontFamily={"inherit"}
           lineHeight={"20px"}
         >
-          Our mission at Anthropologie has always been to surprise and delight
-          you with unexpected, distinctive finds for your closet and home. We
-          source and craft all of our products with care, ensuring that any
-          treasure you find at Anthropologie is unique, just like you. Explore
-          our dresses shop to find styles and fits perfect for any occasion,
-          from cocktail party dresses to wedding guest dresses to casual daytime
-          silhouettes. Shop Anthropologie Weddings and take a look at our
-          selection of wedding dresses and bridesmaids dresses. Browse party
-          skirts, wide-leg pants and jeans, and blouses that will turn heads.
-          Complete your look with uncommon accessories—think only-here slides
-          and head-turning totes. Discover our expansive home collections, from
-          furniture to curtains, decorative pillows to duvets, wall art to
-          Moroccan-inspired rugs. Looking for a housewarming gift? Try a coffee
-          table book, original glassware or a set of coasters.
+          The GRT Textile Booking System is a full-stack web application designed to streamline the management of textile product orders, specifically focusing on categories such as dresses and shoes. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), the system enables users to browse products, check availability, and place orders efficiently. It incorporates key features such as user authentication, real-time inventory tracking, quantity management, and order history. The admin panel allows for easy product and inventory management, ensuring smooth operations. Enhanced with Redux for state management and styled using Chakra UI for a responsive interface, the GRT Textile Booking System provides a modern, scalable, and user-friendly platform for both customers and administrators.
+
+
         </Text>
       </Box>
     </Box>
