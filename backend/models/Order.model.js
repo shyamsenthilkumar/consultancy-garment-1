@@ -9,9 +9,9 @@ const orderSchema = mongoose.Schema(
     brand: { type: String, required: true },
     rating: { type: Number, required: true },
     quantity: { type: Number, required: true },
-    city: { type: String, required: true },
-    authorID:{ type: String, required: true },
-    author:{ type: String, required: true },
+    city: { type: String, required: false },
+    authorID:{ type: String, required: false },
+    author:{ type: String, required: false },
   },
   {
     versionKey: false,
