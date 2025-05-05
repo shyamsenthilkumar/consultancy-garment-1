@@ -8,16 +8,16 @@ const userRouter = express.Router();
 //only admin can access
 userRouter.get("/", auth, async (req, res) => {
   let data = req.body;
-  if (data.role === "admin") {
+  // if (data.role === "admin") {
     try {
       const data = await UserModel.find();
       res.status(200).send({ users: data });
     } catch (error) {
       res.status(400).send(error);
     }
-  } else {
-    res.status(401).send({ msg: "You are not Authorized" });
-  }
+  // } else {
+  //   res.status(401).send({ msg: "You are not Authorized" });
+  // }
 });
 // /* ------ Get one  User ------ */
 
