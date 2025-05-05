@@ -1,15 +1,9 @@
-# Juneberry
+# GRT
 
-Juneberrry is a full stack ecommerce website inspired by Anthropologie where one can purchase women's clothing, beauty products
+GRT is a full stack ecommerce website inspired by Anthropologie where one can purchase women's clothing, beauty products
 and accessories.
 
 Collaborative project built by a team of 4 & completed in 5 days.
-
-## Deployed Links🔗
-
-- Frontend : <a href="https://juneberry.netlify.app/" target="_blank"> <img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" align="center" alt="git"/> </a>
-</br>
-- Backend : <a href="https://juneberry-backend.onrender.com/" target="_blank"> <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor#00C7B7" align="center" alt="git"/> </a>
 
 ## Tech Stack 💻
 <div align="left"><h3 align="left">Frontend</h3>
@@ -111,21 +105,3 @@ Collaborative project built by a team of 4 & completed in 5 days.
 
 
 * Admin Dashboard
-
-
-## Contributors  😇
-
-- 👤 [Salil Upadhyay | Team Lead](https://github.com/salil-01)
-
-  -     Key Responsibility - Complete Backend & Admin Side, Sign-In & Sign-Up, Bag Page, Payment Page
-
-- 👤 [Vikas K Sharma]()
-
-  -     Key Responsibility - Product Page, Single Product Page
-
-- 👤 [Lokendra Pal Shekhawat]()
-
-  -     Key Responsibility - Homepage 
-
-- 👤 [Soumya Ranjan Rout]()
-  -     Key Responsibility - 
