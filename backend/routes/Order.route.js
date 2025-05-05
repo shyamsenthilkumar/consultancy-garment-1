@@ -38,15 +38,16 @@ orderRouter.get("/user", auth, async (req, res) => {
 /* ------ Create an Order ------ */
 orderRouter.post("/create", auth, async (req, res) => {
   try {
-    const { author, authorID, orders } = req.body;
+    // const temp1 = `{"orders":[ ${req.body}}`
+    const orders = req.body;
     if (!Array.isArray(orders)) {
       return res.status(400).send({ error: "Orders must be an array" });
     }
 
     const data = orders.map((element) => ({
       ...element,
-      author,
-      authorID,
+      // author,
+      // authorID,
     }));
     console.log(data);
     const result = await OrderModel.insertMany(data);

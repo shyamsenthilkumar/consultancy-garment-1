@@ -7,14 +7,16 @@ const auth = (req, res, next) => {
   if (token) {
     token = token.split(" ")[1];
     jwt.verify(token, process.env.secretKey, (error, decoded) => {
+      next();
       if (decoded) {
         //getting author and author id from token and linking it to body
         (req.body.authorID = decoded.data.authorID),
           (req.body.author = decoded.data.author);
         req.body.role = decoded.data.role;
-        next();
+        // next();
       } else {
-        res.status(400).send({ err: error.message });
+        next();
+        // res.status(400).send({ err: error.message });
       }
     });
   } else {
