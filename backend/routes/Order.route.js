@@ -52,7 +52,7 @@ orderRouter.post("/create", auth, async (req, res) => {
     console.log(data);
     const result = await OrderModel.insertMany(data);
     console.log("Insert result:", result);
-    res.status(200).send({ msg: "New Order has been added" });
+    return res.status(200).send({ msg: "New Order has been added" });
   } catch (error) {
     console.error(error);
     res.status(400).send({ error: error.message });
