@@ -1,0 +1,66 @@
+const express = require("express");
+const { UserModel } = require("../models/User.model");
+const bcrypt = require("bcrypt");
+const { auth } = require("../middlewares/auth.middleware");
+const userRouter = express.Router();
+
+/* ------ Get all User ------ */
+//only admin can access
+userRouter.get("/", auth, async (req, res) => {
+  let data = req.body;
+  if (data.role === "admin") {
+    try {
+      const data = await UserModel.find();
+      res.status(200).send({ users: data });
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  } else {
+    res.status(401).send({ msg: "You are not Authorized" });
+  }
+});
+// /* ------ Get one  User ------ */
+
+userRouter.get("/:id", auth, async (req, res) => {
+  const data = req.body;
+  const { id } = req.params;
+  const user = await UserModel.findOne({ _id: id });
+  if (data.role === "admin" || data.authorID == user._id) {
+    res.status(200).send({ user: user });
+  } else {
+    res.status(401).send({ msg: "You are not Authorized" });
+  }
+});
+
+/* ------ Register User ------ */
+userRouter.post("/register", async (req, res) => {
+  //logic
+  const { email, password, number, name } = req.body;
+
+  try {
+    //hashing password
+    const user = new UserModel({ name, number, email, password });
+    await user.save();
+    res.status(200).send({ msg: "New User has been registered" });
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+});
+
+/* ------ Delete User ------ */
+userRouter.delete("/delete/:id", auth, async (req, res) => {
+  const { id } = req.params;
+  let data = req.body;
+  if (data.role === "admin") {
+    try {
+      await UserModel.findByIdAndDelete({ _id: id });
+      res.status(200).send({ res: "Deleted User Successfully" });
+    } catch (error) {
+      res.status(200).send(error);
+    }
+  } else {
+    res.status(401).send({ msg: "You are not Authorized" });
+  }
+});
+/* ------ Exports ------ */
+module.exports = { userRouter };
