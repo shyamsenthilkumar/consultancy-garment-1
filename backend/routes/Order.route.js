@@ -21,43 +21,51 @@ orderRouter.get("/", auth, async (req, res) => {
 
 /* ------ Get Order of a specific user / Protected Route ------ */
 orderRouter.get("/user", auth, async (req, res) => {
-  let { authorID } = req.body;
-  //   console.log(authorID);
+  const { authorID } = req.user;
+
   if (authorID) {
     try {
-      let orders = await OrderModel.find({ authorID });
-      res.status(200).send({ msg: orders });
+      const orders = await OrderModel.find({ authorID });
+      res.status(200).send({ orders });
     } catch (error) {
       res.status(400).send({ error: error.message });
     }
   } else {
-    res.status(401).send({ msg: "Please login to access your orders" });
+    res.status(401).send({ msg: "Unauthorized" });
   }
 });
+
 
 /* ------ Create an Order ------ */
 orderRouter.post("/create", auth, async (req, res) => {
   try {
-    // const temp1 = `{"orders":[ ${req.body}}`
     const orders = req.body;
+
     if (!Array.isArray(orders)) {
       return res.status(400).send({ error: "Orders must be an array" });
     }
 
     const data = orders.map((element) => ({
       ...element,
-      // author,
-      // authorID,
     }));
-    console.log(data);
+
+    console.log("Order data to insert:", data);
+
     const result = await OrderModel.insertMany(data);
+
     console.log("Insert result:", result);
-    return res.status(200).send({ msg: "New Order has been added" });
+
+    return res.status(200).send({ msg: "New Order has been added", result });
   } catch (error) {
-    console.error(error);
-    res.status(400).send({ error: error.message });
+    console.error("Error inserting orders:", error);
+
+    // Ensure no response was sent already
+    if (!res.headersSent) {
+      res.status(500).send({ error: error.message });
+    }
   }
 });
+
 
 
 
